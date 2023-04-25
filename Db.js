@@ -4,10 +4,10 @@ import "dotenv/config";
 // node
 console.log();
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "we2code",
-  password: "we2code",
-  database: "nurseryDB",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DBNAME,
 });
 
 connection.connect((error) => {
